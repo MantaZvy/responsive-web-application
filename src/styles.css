@@ -1,4 +1,52 @@
+:root {
+  --default-background-color: rgb(237, 229, 220);
+}
 body {
+  background-color: var(--default-background-color);
   font-family: "Fjalla One", sans-serif;
   font-style: normal;
+  text-align: center;
+}
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+h1 {
+  text-align: center;
+}
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+    url(/images/swale\ back\ pain\ clinic\ Lawrence\ on\ idd\ bed\ pic.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 260px 0;
+  color: white;
+  border-radius: 10px;
+}
+header h1 {
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 1;
+  margin: 0;
+}
+
+header h3 {
+  margin-top: 30px;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: 5px;
+  text-align: center;
+}
+@media (max-width: 900px) {
+  header {
+    padding: 30px 0;
+  }
+  header h1 {
+    font-size: 50px;
+  }
+  header h3 {
+    font-size: 17px;
+  }
 }
