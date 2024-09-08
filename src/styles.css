@@ -1,7 +1,14 @@
 :root {
   --default-background-color: rgb(237, 229, 220);
 }
+html,
 body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
   background-color: var(--default-background-color);
   font-family: "Fjalla One", sans-serif;
   font-style: normal;
@@ -22,7 +29,6 @@ header {
   background-repeat: no-repeat;
   padding: 260px 0;
   color: white;
-  border-radius: 10px;
 }
 header h1 {
   font-weight: 700;
@@ -39,7 +45,44 @@ header h3 {
   letter-spacing: 5px;
   text-align: center;
 }
-@media (max-width: 900px) {
+section .grid {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+footer .grid {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/images/green\ landscape.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 22px 0;
+}
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+footer ul a {
+  color: white;
+  opacity: 0.6;
+  line-height: 1.5;
+}
+footer i {
+  margin-right: 8px;
+}
+.phone-logo {
+  color: orange;
+}
+.mail-logo {
+  color: rgb(31, 135, 205);
+}
+.location-ping-logo {
+  color: rgb(205, 31, 31);
+}
+@media (max-width: 960px) {
   header {
     padding: 30px 0;
   }
