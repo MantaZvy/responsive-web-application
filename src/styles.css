@@ -1,6 +1,9 @@
 :root {
   --default-background-color: rgb(237, 229, 220);
 }
+html {
+  scroll-behavior: smooth;
+}
 html,
 body {
   height: 100%;
@@ -45,7 +48,7 @@ header h3 {
   letter-spacing: 5px;
   text-align: center;
 }
-main h3 {
+main .grid h3 {
   font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
@@ -55,7 +58,7 @@ main p {
   font-size: 15px;
 }
 section {
-  padding: 100px 0;
+  padding: 100px;
 }
 main .grid {
   display: grid;
@@ -64,6 +67,62 @@ main .grid {
 section .grid {
   max-width: 1200px;
   margin: 0 auto;
+}
+main .grid-3-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+.card {
+  background-color: white;
+  margin: 30px 0;
+  padding: 10px;
+  border-radius: 10px;
+}
+.card:hover {
+  transform: scale(1.05);
+  transition: all 200ms ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.card-header img {
+  width: 300px;
+  height: 200px;
+}
+.card-header img {
+  object-fit: cover;
+}
+.card-body {
+  padding: 30px;
+}
+main h4 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  color: #272044;
+  margin: 0;
+  margin-top: 10px;
+}
+main p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #272044;
+  opacity: 0.7;
+}
+.btn {
+  display: block;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 16px;
+  background-color: #462cb3;
+  text-decoration: none;
+  border-radius: 8px;
 }
 footer .grid {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -89,6 +148,14 @@ footer ul a {
 footer i {
   margin-right: 8px;
 }
+.card-footer {
+  padding: 0 30px 30px;
+}
+.card-footer a:hover {
+  color: black;
+  transition: all 200ms ease-in-out;
+  background-color: #ac9af4;
+}
 .phone-logo {
   color: orange;
 }
@@ -100,6 +167,9 @@ footer i {
 }
 main .video-responsive {
   max-width: 100%;
+}
+main.img {
+  width: 100px;
 }
 @media (max-width: 960px) {
   header {
@@ -114,15 +184,20 @@ main .video-responsive {
   footer ul {
     padding: 22px 0;
   }
-  main .grid {
-    display: grid;
+  .grid {
     grid-template-columns: 1fr;
     grid-gap: 32px;
+  }
+  main .grid-3-columns {
+    grid-template-columns: 1fr;
   }
   section {
     padding: 30px;
   }
   main .video-responsive {
     max-width: 100%;
+  }
+  .card-header img {
+    display: none;
   }
 }
