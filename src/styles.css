@@ -53,10 +53,6 @@ main .grid h3 {
   font-weight: bold;
   text-transform: uppercase;
 }
-main p {
-  opacity: 0.7;
-  font-size: 15px;
-}
 section {
   padding: 100px;
 }
@@ -211,6 +207,18 @@ main.img {
     max-width: 100%;
   }
   .card-header img {
+    display: none;
+  }
+  .embed {
+    aspect-ratio: 16 / 9;
+  }
+  .location-img img {
+    display: none;
+  }
+  .location-img iframe {
+    margin-top: 180px;
+  }
+  .disc-video {
     display: none;
   }
 }
