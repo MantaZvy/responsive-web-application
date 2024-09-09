@@ -83,9 +83,8 @@ main .grid-3-columns {
 .card-header img {
   width: 300px;
   height: 200px;
-}
-.card-header img {
   object-fit: cover;
+  filter: brightness(80%);
 }
 .card-body {
   padding: 30px;
@@ -132,6 +131,33 @@ main p {
   background-color: #462cb3;
   text-decoration: none;
   border-radius: 8px;
+}
+table {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+table caption {
+  font-size: 30px;
+  margin-bottom: 30px;
+  margin-top: 0;
+  text-decoration: underline;
+}
+td img {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  border: orange solid 2px;
+}
+td img:hover {
+  transform: scale(1.2);
+  transition: all 200ms ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+tr th {
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 footer .grid {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
